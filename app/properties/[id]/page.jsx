@@ -1,9 +1,11 @@
-const PropertyDetails = () => {
+"use client";
+
+const PropertyPage = () => {
   return (
     <div>
-      <h1>Propery Details</h1>
+      <h1>Propery Page </h1>
     </div>
   );
 };
 
-export default PropertyDetails;
+export default PropertyPage;
