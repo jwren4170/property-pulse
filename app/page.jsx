@@ -1,10 +1,11 @@
 import Hero from "@/components/Hero";
 import InfoBoxes from "@/components/InfoBoxes";
 import PropertyCard from "@/components/PropertyCard";
-import properties from "@/data/properties.json";
 import Link from "next/link";
+import { fetchProperties } from "@/utils/requests";
 
-const Home = () => {
+const Home = async () => {
+  const properties = await fetchProperties();
   const recentProperties = properties
     .sort(() => Math.random() - Math.random())
     .slice(0, 3);

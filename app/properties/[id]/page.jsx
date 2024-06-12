@@ -1,9 +1,9 @@
-"use client";
+import SinglePropertyCard from "@/components/SinglePropertyCard";
 
 const PropertyPage = () => {
   return (
     <div>
-      <h1>Propery Page </h1>
+      <SinglePropertyCard />
     </div>
   );
 };
