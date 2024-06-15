@@ -2,6 +2,7 @@ import connectDB from "@/config/database";
 import User from "@/models/User";
 
 import GoogleProvider from "next-auth/providers/google";
+import GithubProvider from "next-auth/providers/github";
 
 export const authOptions = {
   providers: [
@@ -16,6 +17,17 @@ export const authOptions = {
         },
       },
     }),
+    // GithubProvider({
+    //   clientId: process.env.AUTH_GITHUB_ID,
+    //   clientSecret: process.env.AUTH_GITHUB_SECRET,
+    //   authorization: {
+    //     params: {
+    //       prompt: "consent",
+    //       access_type: "offline",
+    //       response_type: "code",
+    //     },
+    //   },
+    // }),
   ],
   callbacks: {
     // Invoked on successful signin

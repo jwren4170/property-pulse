@@ -115,7 +115,6 @@ const Navbar = () => {
                       key={index}
                       className="flex items-center text-white bg-gray-700 hover:bg-gray-900 hover:text-white rounded-md px-3 py-2"
                     >
-                      <FaGoogle className="text-white mr-2" />
                       <span>Login or Register</span>
                     </button>
                   ))}
@@ -164,9 +163,9 @@ const Navbar = () => {
                     <span className="absolute -inset-1.5"></span>
                     <span className="sr-only">Open user menu</span>
                     <Image
-                      className="h-8 w-8 rounded-full"
+                      className="h-10 10 rounded-full"
                       src={profileImage || profileDefault}
-                      alt=""
+                      alt="Profile Image"
                       width={40}
                       height={40}
                     />
