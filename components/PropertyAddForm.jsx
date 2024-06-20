@@ -1,4 +1,5 @@
 "use client";
+
 import addProperty from "@/app/actions/addProperty";
 // import { toast } from "react-toastify";
 import SubmitButton from "./SubmitButton";
@@ -214,6 +215,50 @@ const PropertyAddForm = () => {
           <div>
             <input
               type="checkbox"
+              id="amenity_mountain_View"
+              name="amenities"
+              value="Mountain View"
+              className="mr-2"
+            />
+            <label htmlFor="amenity_mountain_View">Mountain View</label>
+          </div>
+          <div>
+            <input
+              type="checkbox"
+              id="amenity_hiking_trails_access"
+              name="amenities"
+              value="Hiking Trails Access"
+              className="mr-2"
+            />
+            <label htmlFor="amenity_hiking_trails_access">
+              Hiking Trails Access
+            </label>
+          </div>
+          <div>
+            <input
+              type="checkbox"
+              id="pet_friendly"
+              name="amenities"
+              value="Pet Friendly"
+              className="mr-2"
+            />
+            <label htmlFor="pet_friendly">Pet Friendly</label>
+          </div>
+          <div>
+            <input
+              type="checkbox"
+              id="amenity_ski_equipment_storage"
+              name="amenities"
+              value="Ski Equipment Storage"
+              className="mr-2"
+            />
+            <label htmlFor="amenity_ski_equipment_storage">
+              Ski Equipment Storage
+            </label>
+          </div>
+          <div>
+            <input
+              type="checkbox"
               id="amenity_24_7_security"
               name="amenities"
               value="24/7 Security"
@@ -256,6 +301,28 @@ const PropertyAddForm = () => {
           <div>
             <input
               type="checkbox"
+              id="amenity_high_speed_internet"
+              name="amenities"
+              value="High-Speed Internet"
+              className="mr-2"
+            />
+            <label htmlFor="amenity_high_speed_internet">
+              High-Speed Internet
+            </label>
+          </div>
+          <div>
+            <input
+              type="checkbox"
+              id="amenity_beach_access"
+              name="amenities"
+              value="Beach Access"
+              className="mr-2"
+            />
+            <label htmlFor="amenity_beach_access">Beach Access</label>
+          </div>
+          <div>
+            <input
+              type="checkbox"
               id="amenity_gym_fitness_center"
               name="amenities"
               value="Gym/Fitness Center"
@@ -294,6 +361,26 @@ const PropertyAddForm = () => {
               className="mr-2"
             />
             <label htmlFor="amenity_smart_tv">Smart TV</label>
+          </div>
+          <div>
+            <input
+              type="checkbox"
+              id="amenity_outdoor_grill_bbq"
+              name="amenities"
+              value="Outdoor Grill/BBQ"
+              className="mr-2"
+            />
+            <label htmlFor="amenity_outdoor_grill_bbq">Outdoor Grill/BBQ</label>
+          </div>
+          <div>
+            <input
+              type="checkbox"
+              id="amenity_fireplace"
+              name="amenities"
+              value="Fireplace"
+              className="mr-2"
+            />
+            <label htmlFor="amenity_fireplace">Fireplace</label>
           </div>
           <div>
             <input
