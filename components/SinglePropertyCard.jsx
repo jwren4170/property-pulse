@@ -11,13 +11,13 @@ import {
   FaCheck,
   FaPaperPlane,
   FaMapMarker,
-  FaMoneyBill,
   FaRulerCombined,
   FaShare,
 } from "react-icons/fa";
 import PropertyHeaderImage from "./PropertyHeaderImage";
 import Link from "next/link";
 import Spinner from "@/components/Spinner";
+import PropertyImages from "./PropertyImages";
 
 // get rate display
 const SinglePropertyCard = () => {
@@ -106,37 +106,37 @@ const SinglePropertyCard = () => {
                         <div className="text-gray-500 mr-2 font-bold">
                           Nightly
                         </div>
-                        {property?.rates?.nightly ? (
-                          <p className="text-blue-500 font-bold">
-                            {formatRates(property.rates.nightly)}
-                          </p>
-                        ) : (
-                          <p className="text-blue-500 font-bold">N/A</p>
-                        )}
+                        <div className="text-1xl font-normal text-blue-500">
+                          {property.rates.nightly ? (
+                            `${formatRates(property.rates.nightly)}`
+                          ) : (
+                            <p className="text-blue-500 font-bold">N/A</p>
+                          )}
+                        </div>
                       </div>
                       <div className="flex items-center justify-center mb-4 border-b border-gray-200 md:border-b-0 pb-4 md:pb-0">
-                        <div className="text-gray-500 mr-2 font-bold">
+                        <div className="text-gray-500 mr-2 font-normal">
                           Weekly
                         </div>
-                        {property?.rates?.weekly ? (
-                          <p className="text-blue-500 font-bold">
-                            {formatRates(property.rates.weekly)}
-                          </p>
-                        ) : (
-                          <p className="text-blue-500 font-bold">N/A</p>
-                        )}
+                        <div className="text-1xl font-bold text-blue-500">
+                          {property.rates.weekly ? (
+                            `${formatRates(property.rates.weekly)}`
+                          ) : (
+                            <p className="text-blue-500 font-bold">N/A</p>
+                          )}
+                        </div>
                       </div>
                       <div className="flex items-center justify-center mb-4 pb-4 md:pb-0">
-                        <div className="text-gray-500 mr-2 font-bold">
+                        <div className="text-gray-500 mr-2 font-normal">
                           Monthly
                         </div>
-                        {property?.rates?.monthly ? (
-                          <p className="text-blue-500 font-bold">
-                            {formatRates(property.rates.monthly)}
-                          </p>
-                        ) : (
-                          <p className="text-blue-500 font-bold">N/A</p>
-                        )}
+                        <div className="text-1xl font-bold text-blue-500">
+                          {property.rates.monthly ? (
+                            `${formatRates(property.rates.monthly)}`
+                          ) : (
+                            <p className="text-blue-500 font-normal">N/A</p>
+                          )}
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -172,8 +172,8 @@ const SinglePropertyCard = () => {
                     <h3 className="text-lg font-bold mb-6">Amenities</h3>
 
                     <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 list-none ">
-                      {property?.amenities?.map((amenity) => (
-                        <li key={amenity}>
+                      {property?.amenities?.map((amenity, index) => (
+                        <li key={index}>
                           <FaCheck className="text-green-600 mr-1 mb-1 inline-block" />{" "}
                           {amenity}
                         </li>
@@ -271,9 +271,9 @@ const SinglePropertyCard = () => {
               </div>
             </div>
           </section>
+          <PropertyImages images={property.images} />
         </>
       )}
-      ;
     </>
   );
 };

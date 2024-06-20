@@ -33,7 +33,7 @@ const PropertyCard = ({ property }) => {
   return (
     <div className="rounded-xl shadow-md relative">
       <Image
-        src={`/images/properties/${property.images[0]}`}
+        src={property.images[0]}
         alt="Property Image"
         width={0}
         height={0}
@@ -50,7 +50,7 @@ const PropertyCard = ({ property }) => {
           {getRateDisplay(formatRates)}
         </h3>
 
-        <div className="flex justify-center gap-3 text-gray-500 mb-4">
+        <div className="flex justify-center  gap-3 text-gray-500 mb-4">
           <p>
             <FaBed className="inline mr-2" />
             {property.beds}&nbsp;
